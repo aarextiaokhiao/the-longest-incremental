@@ -1,5 +1,5 @@
 :root { /* theme stuff */
-  --font: "Lato",sans-serif;
+  --font: "Lato", sans-serif;
   --font-color: #012D40;
   --bg: #719dcc;
 }
@@ -8,8 +8,6 @@ body {
   font-family: var(--font);
   color: var(--font-color);
   text-align: center;
-}
-#bg {
   background: var(--bg)
 }
 #ver {
@@ -17,7 +15,8 @@ body {
 	top: 0;
 	right: 0;
 	text-align: right;
-	opacity: 0.5
+	opacity: 0.5;
+  display: none
 }
 #dev {
 	transition-duration: 3s
@@ -136,19 +135,19 @@ h1, h2, h3 {
   vertical-align: 0.5;
 }
 /* specific tab button styling */
-#stab_btn_main_upgrades {
+#tab_btn_upg {
   background-color: #c8ffc8;
 }
-#stab_btn_main_milestones, #stab_btn_stats_l1, #boosterconfirm, #respecconfirm {
+#tab_btn_ms, #tab_btn_stats_l1, #boosterconfirm, #respecconfirm {
   background-color: #c8ffff;
 }
-#tabs button {
+#tabs_screen button {
   width: 110px;
   height: 30px;
   border-radius: 15px;
   display: table-row
 }
-.stab button {
+.tabs button {
   width: 90px;
   height: 25px;
   padding: 0;
@@ -166,36 +165,23 @@ h1, h2, h3 {
   color: inherit;
 }
 
-.number {
-  position: absolute;
-  left: 20%;
-}
-
-#stab_btn_main_consume, #consumeconfirm {
+#tab_btn_consume, #consumeconfirm {
   color: #ffffff;
   background-color: #6900aa;
 }
-#tab_btn_auto {
-  color: #ffffff;
-  background-color: #00a81c;
-}
-#stab_btn_settings_lore {
-  color: #ffffff;
-  background-color: #b06621;
-}
-#tab_btn_dark, #stab_btn_stats_l2, #darkconfirm {
+#tab_btn_dark, #tab_btn_stats_l2, #darkconfirm {
   color: #bbbbbb;
   background-color: #000000;
 }
 #tab_btn_chal {
   color: #ffffff;
-  background-color: #fb0;
+  background-color: #ffbb00;
 }
 #tab_btn_ach {
   color: #ffffff;
   background-color: #0077ff;
 }
-#tab_btn_settings, #stab_btn_settings_main, #tab_btn_stats, #stab_btn_settings_credits, #stab_btn_settings_changelog {
+#tab_btn_settings, #tabs_settings button {
   color: #ffffff;
   background-color: #333333;
 }
@@ -368,6 +354,11 @@ button.bought:hover, button.cannotbuy:hover {
 .milestones td {
   padding: 0;
 }
+.milestone {
+  text-align: left;
+  width: 240px;
+  border: 2px solid #0000003f
+}
 #abilities {
   width: 100%;
   text-align: right
@@ -513,7 +504,7 @@ li span {
   position: relative;
   left: -10px;
 } /* im adding random shit :cart_troll: */
-
+/* help help help help what are we doing help help help help */
 /* fixes */
 button h1, button h2, button h3 {
   color: black
